@@ -1,0 +1,65 @@
+.sec {
+  --ink: #12372a;
+  --ink-2: #1b4a39;
+  --cream: #fbf3e4;
+  --orange: #f26b3a;
+  --sun: #ffc247;
+  --pink: #ffb9a3;
+  --mint: #bfe8d0;
+  position: relative;
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-body), system-ui, sans-serif;
+  padding: clamp(72px, 10vw, 140px) clamp(20px, 5vw, 64px);
+  overflow: hidden;
+  isolation: isolate;
+}
+.sec *, .sec *::before, .sec *::after { box-sizing: border-box; }
+.display { font-family: var(--font-display), Georgia, serif; }
+.glow { position: absolute; width: 520px; height: 520px; border-radius: 50%; background: var(--ink-2); right: -160px; top: -160px; z-index: -1; }
+.wrap { max-width: 1360px; margin: 0 auto; }
+
+.head { display: grid; gap: 24px; align-items: end; margin-bottom: clamp(36px, 6vw, 72px); }
+@media (min-width: 900px) { .head { grid-template-columns: 1.3fr 1fr; } }
+.kicker { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--sun); }
+.kicker::before { content: ""; width: 36px; height: 3px; background: var(--sun); border-radius: 3px; }
+.title { margin: 16px 0 0; font-size: clamp(2.4rem, 6.4vw, 5rem); line-height: .98; letter-spacing: -.03em; font-weight: 800; }
+.title em { color: var(--sun); font-style: italic; }
+.sub { margin: 0; font-size: 1.1rem; line-height: 1.6; color: #cfe3d8; max-width: 30rem; }
+
+.grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .grid { grid-template-columns: repeat(6, 1fr); } .c1 { grid-column: span 3; } .c2 { grid-column: span 3; } .c3, .c4, .c5 { grid-column: span 2; } .c6 { grid-column: span 6; } }
+
+.card { position: relative; border-radius: 28px; padding: 30px; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; color: var(--ink); text-decoration: none; transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s; }
+.card:hover { transform: translateY(-8px) rotate(-.6deg); box-shadow: 0 28px 50px -18px rgba(0,0,0,.5); }
+.card:nth-child(even):hover { transform: translateY(-8px) rotate(.6deg); }
+.sun { background: var(--sun); } .org { background: var(--orange); color: #fff; } .pk { background: var(--pink); }
+.mt { background: var(--mint); } .cr { background: var(--cream); } .dk { background: var(--ink-2); color: var(--cream); border: 2px solid #2d6652; }
+
+.num { position: absolute; right: 22px; top: 6px; font-size: 7rem; font-weight: 800; line-height: 1; opacity: .13; letter-spacing: -.05em; transition: transform .5s, opacity .5s; }
+.card:hover .num { transform: scale(1.12) rotate(-6deg); opacity: .22; }
+.icon { width: 68px; height: 68px; border-radius: 20px; background: rgba(18,55,42,.12); display: grid; place-items: center; font-size: 2rem; transition: transform .4s cubic-bezier(.3,1.6,.5,1); }
+.org .icon, .dk .icon { background: rgba(255,255,255,.16); }
+.card:hover .icon { transform: scale(1.15) rotate(-10deg); }
+.name { margin: 26px 0 8px; font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+.desc { margin: 0; font-size: .98rem; line-height: 1.5; opacity: .85; max-width: 26rem; }
+.foot { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; font-weight: 800; font-size: .92rem; }
+.go { width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--cream); display: grid; place-items: center; transition: transform .3s, background .3s; }
+.org .go, .dk .go { background: var(--cream); color: var(--ink); }
+.card:hover .go { transform: rotate(-45deg) scale(1.1); }
+.wide { flex-direction: row; align-items: center; gap: 28px; flex-wrap: wrap; }
+.wide .left { flex: 1 1 340px; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.tags span { background: rgba(251,243,228,.12); border: 1.5px solid rgba(251,243,228,.3); padding: 9px 16px; border-radius: 999px; font-weight: 700; font-size: .88rem; }
+
+/* entrada al hacer scroll (solo donde el navegador lo soporta) */
+@supports (animation-timeline: view()) {
+  .card, .head > * { animation: in both linear; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+}
+@keyframes in { from { opacity: 0; transform: translateY(60px) scale(.96); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .head > * { animation: none !important; }
+  .card, .icon, .num, .go { transition: none !important; }
+}
