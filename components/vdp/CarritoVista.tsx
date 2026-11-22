@@ -4,7 +4,7 @@ import { useCarrito } from "@/lib/carrito";
 import { PRODUCTOS, precio } from "@/lib/productos";
 import s from "./vdp.module.css";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || ""; // ej: 5492235551234
+const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || "5491159772229"; // ej: 5492235551234
 
 export default function CarritoVista() {
   const { lineas, cambiar, quitar, vaciar } = useCarrito();
@@ -46,11 +46,7 @@ export default function CarritoVista() {
       <div className={s.card}>
         <h3 style={{ marginTop: 0 }}>Resumen</h3>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: "1.2rem", margin: "12px 0 20px" }}><span>Total</span><span className={s.price}>{precio(total)}</span></div>
-        {WHATSAPP ? (
-          <a className={s.btn} style={{ width: "100%", justifyContent: "center" }} href={`https://wa.me/${WHATSAPP}?text=${msg}`} target="_blank" rel="noopener noreferrer">Enviar pedido por WhatsApp</a>
-        ) : (
-          <a className={s.btn} style={{ width: "100%", justifyContent: "center" }} href={`mailto:hola@vidadeperros.com?subject=Pedido&body=${msg}`}>Enviar pedido por mail</a>
-        )}
+                  <a className={s.btn} style={{ width: "100%", justifyContent: "center" }} href={`https://wa.me/${WHATSAPP}?text=${msg}`} target="_blank" rel="noopener noreferrer">Enviar pedido por WhatsApp</a>
         <p style={{ color: "var(--body)", fontSize: ".85rem", marginTop: 14 }}>Coordinamos el pago y la entrega con vos por mensaje.</p>
       </div>
     </div>

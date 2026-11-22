@@ -6,6 +6,7 @@ import PawshyGaleria from "@/components/pawshy/PawshyGaleria";
 import PawshyTestimonios from "@/components/pawshy/PawshyTestimonios";
 import PawshyPrecios from "@/components/pawshy/PawshyPrecios";
 import PawshyUbicacion from "@/components/pawshy/PawshyUbicacion";
+import TiendaDestacados from "@/components/vdp/TiendaDestacados";
 import PawshyCta from "@/components/pawshy/PawshyCta";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <PawshyHero />
       <PawshyIntro />
       <PawshyServicios />
+      <TiendaDestacados />
       <PawshyGaleria />
       <PawshyTestimonios />
       <PawshyPrecios />

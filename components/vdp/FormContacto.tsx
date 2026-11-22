@@ -11,7 +11,7 @@ export default function FormContacto() {
         e.preventDefault();
         const f = new FormData(e.currentTarget);
         const cuerpo = `Nombre: ${f.get("nombre")}\nTeléfono: ${f.get("tel")}\nMascota: ${f.get("mascota")}\nServicio: ${f.get("servicio")}\n\n${f.get("msg")}`;
-        window.location.href = `mailto:hola@vidadeperros.com?subject=${encodeURIComponent("Consulta / turno")}&body=${encodeURIComponent(cuerpo)}`;
+        window.location.href = `https://wa.me/5491159772229?text=${encodeURIComponent(cuerpo)}`;
         setEnviado(true);
       }}
     >

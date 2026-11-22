@@ -11,10 +11,10 @@ export default function Contacto() {
           <div className={s.grid} style={{ gap: 24 }}>
             <div className={s.card}>
               <h3 style={{ marginTop: 0 }}>Datos</h3>
-              <p>📍 Tu dirección acá · Tu ciudad</p>
-              <p style={{ marginTop: 8 }}>📞 (000) 000-0000</p>
-              <p style={{ marginTop: 8 }}>✉️ hola@vidadeperros.com</p>
-              <p style={{ marginTop: 8 }}>🕘 Lunes a sábados · completar horarios</p>
+              <p>📍 Dirección a confirmar</p>
+              <p style={{ marginTop: 8 }}>📞 +54 11 5977-2229</p>
+              <p style={{ marginTop: 8 }}>📸 <a href="https://instagram.com/vdperros" target="_blank" rel="noopener noreferrer">@vdperros</a></p>
+              <p style={{ marginTop: 8 }}>🕘 Horarios a confirmar</p>
             </div>
             <div className={s.mapbox}><iframe title="Mapa" loading="lazy" src="https://maps.google.com/maps?q=Argentina&t=m&z=5&output=embed" /></div>
           </div>
