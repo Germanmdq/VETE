@@ -1,0 +1,55 @@
+.page { --g: var(--uicore-primary-color, #17b461); --o: var(--uicore-secondary-color, #fa8930); --sky: var(--uicore-accent-color, #8fd6e5); --navy: var(--uicore-headline-color, #232f61); --cream: var(--uicore-white-color, #f6f0eb); --body: var(--uicore-body-color, rgba(35,47,97,.65)); --pink: #eb5ba0;
+  font-family: "Mona Sans", system-ui, sans-serif; color: var(--navy); background: var(--cream); }
+.page *, .page *::before, .page *::after { box-sizing: border-box; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+.hero { padding: clamp(130px, 16vw, 190px) 0 clamp(40px, 6vw, 72px); position: relative; overflow: hidden; }
+.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; z-index: 0; }
+.hero::before { width: 420px; height: 420px; background: var(--sky); opacity: .55; right: -120px; top: -140px; }
+.hero::after { width: 200px; height: 200px; background: var(--o); opacity: .85; right: 12%; bottom: -90px; }
+.hero .wrap { position: relative; z-index: 1; }
+.kicker { display: inline-block; background: #fff; border-radius: 999px; padding: 8px 18px; font-weight: 700; font-size: .85rem; color: var(--g); }
+.h1 { font-family: "DynaPuff", cursive; font-weight: 500; font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 1.02; margin: 18px 0 0; color: var(--navy); max-width: 16ch; }
+.lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--body); max-width: 40rem; margin: 20px 0 0; line-height: 1.6; }
+.sec { padding: clamp(40px, 6vw, 88px) 0; }
+.h2 { font-family: "DynaPuff", cursive; font-weight: 500; font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: 1.05; margin: 0 0 14px; }
+.grid { display: grid; gap: 24px; }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.g4 { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.card { background: #fff; border-radius: 28px; padding: 28px; transition: transform .3s, box-shadow .3s; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 24px 40px -20px rgba(35,47,97,.35); }
+.card h3 { font-family: "DynaPuff", cursive; font-weight: 500; font-size: 1.5rem; margin: 14px 0 8px; }
+.card p { margin: 0; color: var(--body); line-height: 1.55; }
+.ico { width: 60px; height: 60px; border-radius: 20px; display: grid; place-items: center; font-size: 1.7rem; }
+.img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 22px; background: var(--sky); }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--g); color: #fff; border: 0; border-radius: 100px; padding: 15px 30px; font-weight: 700; font-size: 1rem; cursor: pointer; text-decoration: none; font-family: inherit; transition: background .25s, transform .25s; }
+.btn:hover { background: var(--o); transform: translateY(-2px); color: #fff; }
+.btnLine { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 2px var(--navy); }
+.btnLine:hover { background: var(--navy); color: #fff; }
+.price { font-family: "DynaPuff", cursive; font-size: 1.5rem; color: var(--g); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 36px; }
+.chip { padding: 10px 20px; border-radius: 999px; background: #fff; color: var(--navy); font-weight: 700; text-decoration: none; font-size: .95rem; transition: background .2s, color .2s; }
+.chip:hover { background: var(--sky); }
+.chipOn { background: var(--navy); color: #fff; }
+.chipOn:hover { background: var(--navy); }
+.tile { aspect-ratio: 1; border-radius: 22px; display: grid; place-items: center; font-size: clamp(4rem, 8vw, 6rem); position: relative; overflow: hidden; }
+.tile span { position: relative; z-index: 1; filter: drop-shadow(0 8px 10px rgba(0,0,0,.18)); transition: transform .4s cubic-bezier(.3,1.6,.5,1); }
+.card:hover .tile span { transform: scale(1.15) rotate(-6deg); }
+.tag { font-size: .8rem; font-weight: 700; color: var(--g); text-transform: uppercase; letter-spacing: .08em; margin-top: 16px; }
+.band { background: var(--navy); color: var(--cream); border-radius: 36px; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+.band h2 { font-family: "DynaPuff", cursive; font-weight: 500; font-size: clamp(1.8rem, 4vw, 3rem); margin: 0; max-width: 22ch; line-height: 1.1; }
+.form { display: grid; gap: 16px; }
+.form label { font-weight: 700; font-size: .9rem; display: grid; gap: 8px; }
+.form input, .form textarea, .form select { font: inherit; padding: 15px 18px; border-radius: 16px; border: 2px solid transparent; background: #fff; color: var(--navy); outline: none; }
+.form input:focus, .form textarea:focus, .form select:focus { border-color: var(--g); }
+.row { display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid rgba(35,47,97,.12); }
+.qty { display: inline-flex; align-items: center; background: #fff; border-radius: 999px; }
+.qty button { width: 36px; height: 36px; border: 0; background: none; font-size: 1.2rem; cursor: pointer; color: var(--navy); }
+.fab { position: fixed; right: 20px; bottom: 20px; z-index: 9999; background: var(--navy); color: #fff; border-radius: 999px; padding: 14px 22px; font-weight: 700; text-decoration: none; display: flex; gap: 10px; align-items: center; box-shadow: 0 16px 30px -10px rgba(35,47,97,.6); font-family: "Mona Sans", sans-serif; transition: transform .25s, background .25s; }
+.fab:hover { background: var(--g); transform: translateY(-3px); color: #fff; }
+.fab b { background: var(--o); border-radius: 999px; min-width: 24px; height: 24px; display: grid; place-items: center; font-size: .8rem; padding: 0 6px; }
+.stats { display: flex; flex-wrap: wrap; gap: 24px 56px; margin-top: 36px; }
+.stats b { display: block; font-family: "DynaPuff", cursive; font-weight: 500; font-size: 2.6rem; color: var(--g); }
+.stats span { color: var(--body); font-weight: 600; }
+.mapbox { border-radius: 28px; overflow: hidden; min-height: 320px; background: var(--sky); }
+.mapbox iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }

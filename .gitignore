@@ -16,3 +16,4 @@ npm-debug.log*
 # Datos internos del catálogo (costos, proveedores) y planillas originales
 /supabase/private/
 *.xlsx
+.vercel

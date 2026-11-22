@@ -1,0 +1,15 @@
+ 
+ @font-face { font-family:"DynaPuff";src:url("/pawshy/wp-content/uploads/sites/163/2026/02/DynaPuff-Medium.ttf") format('truetype');font-display:auto;font-style:normal;font-weight:500;} @font-face { font-family:"Mona Sans";src:url("/pawshy/wp-content/uploads/sites/163/2026/02/MonaSans-Medium.ttf") format('truetype');font-display:auto;font-style:normal;font-weight:500;} @font-face { font-family:"Mona Sans";src:url("/pawshy/wp-content/uploads/sites/163/2026/02/MonaSans-SemiBold.ttf") format('truetype');font-display:auto;font-style:normal;font-weight:600;} @font-face { font-family:"Mona Sans";src:url("/pawshy/wp-content/uploads/sites/163/2026/02/MonaSans-Bold.ttf") format('truetype');font-display:auto;font-style:normal;font-weight:700;}
+ 
+
+            .uicore-animate-scroll {
+                animation-fill-mode: both;
+                animation-timing-function: linear;
+                animation-timeline: view(block);
+            }
+
+            .uicore-animate-hide {
+                opacity: 0;
+                visibility: hidden;
+            }
+        
