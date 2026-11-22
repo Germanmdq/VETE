@@ -9,7 +9,7 @@ import CarritoFab from "@/components/vdp/CarritoFab";
 export const metadata: Metadata = {
   title: "Vida de Perros — Veterinaria, peluquería y pet shop",
   description: "Veterinaria, peluquería canina y pet shop. Reservá tu turno online.",
-  icons: { icon: "/pawshy/favicon-vdp.svg" },
+  icons: { icon: "/pawshy/favicon-vdp.png" },
 };
 
 export default function ClonLayout({ children }: { children: React.ReactNode }) {
