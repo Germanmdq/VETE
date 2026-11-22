@@ -1,43 +1,23 @@
 {
-  "name": "vida-de-perros",
-  "version": "1.0.0",
+  "name": "vete",
+  "version": "0.1.0",
   "private": true,
-  "description": "Vida de Perros \u2014 veterinaria, peluquer\u00eda canina y pet shop: tienda online, turnos y panel de administraci\u00f3n (PWA).",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "typecheck": "tsc --noEmit",
-    "test": "node --test --import ./tests/vet/register.mjs tests/vet/*.test.ts",
-    "vet:import": "node scripts/vet-import-catalog.mjs",
-    "vet:pwa-assets": "node scripts/vet-generate-pwa-assets.mjs"
+    "start": "next start"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.8.0",
-    "@supabase/supabase-js": "^2.90.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.562.0",
     "next": "16.3.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "sonner": "^2.0.7",
-    "tailwind-merge": "^3.4.1",
-    "zustand": "^5.0.10"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.6",
-    "sharp": "^0.34.5",
     "tailwindcss": "^4",
-    "typescript": "5.9.3",
-    "xlsx": "^0.18.5"
-  },
-  "engines": {
-    "node": ">=20.9"
+    "typescript": "5.9.3"
   }
 }
