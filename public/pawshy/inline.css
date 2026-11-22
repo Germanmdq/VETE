@@ -13,8 +13,8 @@
                 visibility: hidden;
             }
         .uicore-logo{height:58px !important;width:auto !important}
-/* Hero: título más chico y menos aire arriba, para que la foto se vea de entrada */
-.elementor-element-5dcd42a{padding-top:44px !important;padding-bottom:40px !important}
-.elementor-element-4219b75 .elementor-heading-title{font-size:clamp(2rem,3.4vw,3.1rem) !important;line-height:1.1 !important}
+/* Hero: sin título arriba, la foto va primero */
+.elementor-element-a8574af{display:none !important}
+.elementor-element-5dcd42a{padding-top:20px !important;padding-bottom:40px !important}
 /* Ubicación: el título no se sale de la tarjeta */
 .elementor-element-f188da2 .elementor-heading-title{font-size:clamp(1.8rem,2.7vw,2.8rem) !important;line-height:1.1 !important;overflow-wrap:normal;word-break:normal}
